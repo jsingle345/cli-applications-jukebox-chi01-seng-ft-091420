@@ -28,16 +28,13 @@ def play(songs)
   
   
   if songs.include? user_response
-    puts "Playing #{songs.find |element| element == user_response}"
-  
-end
-  
-  #   else 
-  #   puts "Invalid input, please try again"
-  #   i += 1
-  #   end
-  # end
-  # hits
+    puts "Playing #{songs.find {|element| element == user_response}}"
+  elsif (1..9).to_a.include?(user_response.to_i)
+    puts "Playing #{songs[user_response.to_i - 1]}"
+  else 
+    puts "Invalid input, please try again"
+  end
+  songs
 end
 
 def list(songs)
@@ -58,15 +55,17 @@ def run
   if input == help
     help 
   elsif input == list
-    list(songs)
+    list
   elsif input == play 
-    play(songs)
+    play
   else 
     input == exit 
   exit_jukebox
   end
   
   while input != exit do
-  run
   end
+  
 end
+
+
