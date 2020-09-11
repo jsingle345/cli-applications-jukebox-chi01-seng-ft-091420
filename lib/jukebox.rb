@@ -48,31 +48,52 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def run(my_songs)
- help
-  puts "Please enter a command:"
-  user_response = gets.chomp
-  while user_response != "exit"
-    case user_response
-      when "help"
-        help
-        puts "Please enter a command:"
-        user_response = gets.chomp
-      when "list"
-        list(my_songs)
-        puts "Please enter a command:"
-        user_response = gets.chomp
-      when "play"
-        play(my_songs)
-        puts "Please enter a command:"
-        user_response = gets.chomp
-      when "exit"
-        exit_jukebox
-      else
-        puts "Invalid input, please try again:"
-        user_response = gets.chomp
-      end
-    end
-end 
+# def run(my_songs)
+# help
+#   puts "Please enter a command:"
+#   user_response = gets.chomp
+#   while user_response != "exit"
+#     case user_response
+#       when "help"
+#         help
+#         puts "Please enter a command:"
+#         user_response = gets.chomp
+#       when "list"
+#         list(my_songs)
+#         puts "Please enter a command:"
+#         user_response = gets.chomp
+#       when "play"
+#         play(my_songs)
+#         puts "Please enter a command:"
+#         user_response = gets.chomp
+#       when "exit"
+#         exit_jukebox
+#       else
+#         puts "Invalid input, please try again:"
+#         user_response = gets.chomp
+#       end
+#     end
+# end 
 
+def run(my_songs)
+  #this method is the same as in jukebox.rb	  #this method is the same as in jukebox.rb
+  help
+  input = ""
+  while input != "exit"
+    puts "Please enter a command:"
+    input = gets.chomp
+    case input
+    when "play"
+      play(my_songs)
+    when "list"
+      list(my_songs)
+    when "help"
+      help
+    when "exit"
+      exit_jukebox    
+    else
+      puts "Invalid input, please try again"
+    end
+  end
+end	end
 
