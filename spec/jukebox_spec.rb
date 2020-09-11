@@ -92,7 +92,7 @@ describe "CLI Jukebox" do
       allow(self).to receive(:gets).and_return("help", "exit")
       expect{ run(songs) }.to output(/Please enter a command:/).to_stdout
       allow(self).to receive(:gets).and_return("help", "exit")
-      expect{ run(songs) }.to output(/Please enter a command:/).to_stdout
+      expect{ run(songs) }.to output(/I accept the following commands:/).to_stdout
       allow(self).to receive(:gets).and_return("help", "exit")
       expect{ run(songs) }.to output(/- help : displays this help message/).to_stdout
       allow(self).to receive(:gets).and_return("help", "exit")
