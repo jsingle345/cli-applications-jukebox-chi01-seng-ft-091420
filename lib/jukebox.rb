@@ -68,7 +68,9 @@ def run(my_songs)
         user_response = gets.chomp
       when "exit"
         exit_jukebox
-      
+      else
+        puts "Invalid input, please try again:"
+        user_response = gets.chomp
       end
     end
 end 
