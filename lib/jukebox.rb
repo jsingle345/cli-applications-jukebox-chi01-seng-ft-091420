@@ -76,7 +76,6 @@ end
 # end 
 
 def run(my_songs)
-  #this method is the same as in jukebox.rb	  #this method is the same as in jukebox.rb
   help
   input = ""
   while input != "exit"
@@ -95,5 +94,5 @@ def run(my_songs)
       puts "Invalid input, please try again"
     end
   end
-end	end
+end	
 
