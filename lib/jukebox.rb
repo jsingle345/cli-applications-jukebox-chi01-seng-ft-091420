@@ -49,8 +49,10 @@ def exit_jukebox
 end
 
 def run 
+  help 
   puts "Please enter a command:" 
   input = gets.strip
+  while input != exit do
   
   if input == help
     help 
@@ -62,8 +64,6 @@ def run
     input == exit 
   exit_jukebox
   end
-  
-  while input != exit do
   end
   
 end
