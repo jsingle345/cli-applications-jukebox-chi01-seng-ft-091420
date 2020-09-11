@@ -76,7 +76,6 @@ end
 # end 
 
 def run(my_songs)
-  help
   input = ""
   while input != "exit"
     puts "Please enter a command:"
